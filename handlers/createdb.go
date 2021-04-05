@@ -13,7 +13,8 @@ func Check(e error) {
 }
 
 func CreateDb() {
-	fpCurrentDir := filepath.Join(".")
+	pwd, err := os.Getwd()
+	fpCurrentDir := filepath.Join(pwd)
 	files, err := ioutil.ReadDir(fpCurrentDir)
 	var dbExists = false
 	for _, f := range files {
@@ -22,24 +23,25 @@ func CreateDb() {
 		}
 	}
 
-	fpDbDir := filepath.Join(".", "db")
+	fpDbDir := filepath.Join(pwd, "db")
 	if !dbExists {
-		os.Mkdir(fpDbDir, os.FileMode(0644))
+		os.Mkdir(fpDbDir, os.FileMode(0777))
 	}
 
 	filesFromDb, err := ioutil.ReadDir(fpDbDir)
 	Check(err)
 	if len(filesFromDb) == 0 {
-		fpDbFile := filepath.Join(".", "db", "coffeeorders.json")
+		fpDbFile := filepath.Join(pwd, "db", "coffeeorders.json")
 		emptyArray := []byte("[]")
-		err := ioutil.WriteFile(fpDbFile, emptyArray, 0644)
+		err := ioutil.WriteFile(fpDbFile, emptyArray, 0777)
 		Check(err)
 	}
 }
 
 func DeleteDb() {
 	// first lets make sure the db folder exists, so that we don't crash the application if it got deleted.
-	fpCurrentDir := filepath.Join(".")
+	pwd, err := os.Getwd()
+	fpCurrentDir := filepath.Join(pwd)
 	files, err := ioutil.ReadDir(fpCurrentDir)
 	var dbExists = false
 	for _, f := range files {
@@ -48,13 +50,13 @@ func DeleteDb() {
 		}
 	}
 
-	fpDbDir := filepath.Join(".", "db")
+	fpDbDir := filepath.Join(pwd, "db")
 	if !dbExists {
-		os.Mkdir(fpDbDir, os.FileMode(0644))
+		os.Mkdir(fpDbDir, os.FileMode(0777))
 	}
 
-	fpDbFile := filepath.Join(".", "db", "coffeeorders.json")
+	fpDbFile := filepath.Join(pwd, "db", "coffeeorders.json")
 	emptyArray := []byte("[]")
-	err = ioutil.WriteFile(fpDbFile, emptyArray, 0644)
+	err = ioutil.WriteFile(fpDbFile, emptyArray, 0777)
 	Check(err)
 }
