@@ -19,7 +19,7 @@ func main() {
 	fmt.Println("    Written in GoLang using the Fiber library")
 	fmt.Println("    Feel free to add a star on GitHub 😊")
 	fmt.Println("    You will need this VSCode Extension: https://marketplace.visualstudio.com/items?itemName=humao.rest-client")
-	fmt.Println("    And you will want to use the files in this folder to hit test the endpoints:")
+	fmt.Println("    And you will want to use the files in this folder to test the endpoints:")
 	fmt.Println("        https://github.com/audstanley/coffeeorders-go/tree/main/rest\n")
 
 	fmt.Println("    Written By: Richard Stanley")
