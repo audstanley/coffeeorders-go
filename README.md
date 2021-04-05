@@ -3,7 +3,7 @@
 is an API for [Front-End Web Development: The Big Nerd Ranch Guide](https://www.bignerdranch.com/books/front-end-web-development-the-big-nerd-ranch-guide/)
 The book is missing some endpoints, and this GoLang Project recreates those endpoints and is compiled for windows, mac, and linux.
 
-Check Releases Tab to Download and run the binary.
+Check [Releases](https://github.com/audstanley/coffeeorders-go/releases). Download the bin.zip, extract, and run the binary for your system.
 
 If there is something wrong with the API, please feel free to contibute code or open an issue.
 
