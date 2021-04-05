@@ -1,0 +1,20 @@
+// install the "REST Client" extension in VSCode.
+@baseUrl={{$dotenv baseUrl}}
+
+# get all orders
+GET {{baseUrl}}/coffeeorders HTTP/1.1
+
+###
+
+# get any order from audstanley@gmail.com
+GET {{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
+
+###
+
+# get any order from sjobs@apple.com
+GET {{baseUrl}}/coffeeorders/sjobs@apple.com HTTP/1.1
+
+###
+
+# get any order from jbezos@amazon.com (should be none)
+GET {{baseUrl}}/coffeeorders/jbezos@amazon.com HTTP/1.1

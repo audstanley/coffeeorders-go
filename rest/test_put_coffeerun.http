@@ -1,0 +1,28 @@
+// install the "REST Client" extension in VSCode.
+@baseUrl={{$dotenv baseUrl}}
+
+###
+
+# update flavor for jlpicard@starfleet.com's order
+PUT {{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "earl grey",
+    "emailAddress": "jlpicard@starfleet.com",
+    "flavor": "Vanilla",
+    "strength": 80
+}
+
+###
+
+# update coffee and flavor for audstanley@gmail.com's order
+PUT {{baseUrl}}/coffeeorders/audstanley@gmail.com HTTP/1.1
+content-type: application/json
+
+{
+    "coffee": "double espresso",
+    "emailAddress": "audstanley@gmail.com",
+    "flavor": "Mocha",
+    "strength": 100
+}

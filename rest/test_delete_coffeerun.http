@@ -1,0 +1,12 @@
+// install the "REST Client" extension in VSCode.
+@baseUrl={{$dotenv baseUrl}}
+
+# deletes all the orders from the collection
+DELETE {{baseUrl}}/coffeeorders HTTP/1.1
+
+###
+
+# only delete jlpicard@starfleet.com's last order
+DELETE {{baseUrl}}/coffeeorders/jlpicard@starfleet.com HTTP/1.1
+
+###
