@@ -44,11 +44,15 @@ func ListCoffeeOrdersByEmailAddress(c *fiber.Ctx) error {
 				result.CoffeeOrder = append(result.CoffeeOrder, j)
 			}
 		}
-		return c.JSON(result.CoffeeOrder)
+		if result.CoffeeOrder == nil {
+			return c.JSON([]string{})
+		} else {
+			return c.JSON(result.CoffeeOrder)
+		}
 	}
 }
 
-// GET /coffeeorders/:emailAddress
+// DELETE /coffeeorders/:emailAddress
 func DeleteSingleNewestCoffeeOrderByEmailAddress(c *fiber.Ctx) error {
 	email := c.Params("emailAddress", "")
 	cObj := ReadCoffeeOrdersFromDb()
