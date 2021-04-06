@@ -22,7 +22,9 @@ type CoffeeOrder struct {
 }
 
 func ReadCoffeeOrdersFromDb() CoffeeOrders {
-	fpDbFile := filepath.Join(".", "db", "coffeeorders.json")
+	pwd, err := os.Getwd()
+	Check(err)
+	fpDbFile := filepath.Join(pwd, "db", "coffeeorders.json")
 	jsonFile, err := os.Open(fpDbFile)
 	Check(err)
 	defer jsonFile.Close()
@@ -35,7 +37,9 @@ func ReadCoffeeOrdersFromDb() CoffeeOrders {
 
 func InsertACoffeeOrderIntoDb(co *CoffeeOrder) {
 	CreateDb()
-	fpDbFile := filepath.Join(".", "db", "coffeeorders.json")
+	pwd, err := os.Getwd()
+	Check(err)
+	fpDbFile := filepath.Join(pwd, "db", "coffeeorders.json")
 	jsonFile, err := os.Open(fpDbFile)
 	Check(err)
 	defer jsonFile.Close()
@@ -52,7 +56,9 @@ func InsertACoffeeOrderIntoDb(co *CoffeeOrder) {
 
 func ReplaceCoffeeOrdersIntoDb(cos *CoffeeOrders) {
 	CreateDb()
-	fpDbFile := filepath.Join(".", "db", "coffeeorders.json")
+	pwd, err := os.Getwd()
+	Check(err)
+	fpDbFile := filepath.Join(pwd, "db", "coffeeorders.json")
 	j, err := json.MarshalIndent(cos.CoffeeOrder, "", "    ")
 	err = ioutil.WriteFile(fpDbFile, j, 0644)
 	Check(err)
