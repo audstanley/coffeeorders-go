@@ -16,12 +16,11 @@ GET {{baseUrl}}/coffeeorders HTTP/1.1
 # add new order for triple espresso
 POST {{baseUrl}}/coffeeorders HTTP/1.1
 content-type: application/json
-
 {
     "coffee": "triple espresso",
     "emailAddress": "audstanley@gmail.com",
     "flavor": "Pumpkin Spice",
-    "strength": "100"
+    "strength": 100
 }
 
 ###
@@ -34,7 +33,7 @@ content-type: application/json
     "coffee": "espresso",
     "emailAddress": "aeinstein@aol.com",
     "flavor": "Mocha",
-    "strength": "80"
+    "strength": 80
 }
 
 ###
