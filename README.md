@@ -56,6 +56,12 @@ baseUrl=http://127.0.0.1:3000
 # and now all the http calls will be made to your own computer.
 ```
 
+## TLDR video;
+
+[![tldr](https://i9.ytimg.com/vi/umPXiItPzbQ/mq1.jpg?sqp=CJzVz4oG&rs=AOn4CLAng2mGYz3XOKWjsiJ3AWni9XnCwQ)](https://youtu.be/umPXiItPzbQ)
+
+
+
 
 If there is something wrong with the API, please feel free to contibute code or open an issue.
 
