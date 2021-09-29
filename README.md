@@ -52,7 +52,7 @@ In the rest/.env
 ```bash
 baseUrl=https://co.audstanley.com
 # can be changed to
-baseUrl=127.0.0.1
+baseUrl=http://127.0.0.1
 # and now all the http calls will be made to your own computer.
 ```
 
