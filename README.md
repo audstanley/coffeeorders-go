@@ -42,7 +42,8 @@ coffeeorders-amd64.exe
 ```
 
 ### Once you have the binaries running, you will want this extension:
-    * [REST](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+[REST](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 Once you install the rest extension, you can copy the .http files that are in this repositorie's rest folder,
 don't forget to copy the rest/.env file, since that is where are the http calls are assigned to.
