@@ -3,7 +3,58 @@
 is an API for [Front-End Web Development: The Big Nerd Ranch Guide](https://www.bignerdranch.com/books/front-end-web-development-the-big-nerd-ranch-guide/)
 The book is missing some endpoints, and this GoLang Project recreates those endpoints and is compiled for windows, mac, and linux.
 
+
+## Best way to run the application:
+
 Check [Releases](https://github.com/audstanley/coffeeorders-go/releases). Download the bin.zip, extract, and run the binary for your system.
+
+If youre on Linux/Mac, you'll likely need to do these things after you uncompress the zip:
+
+
+On Mac:
+
+```bash
+# navigate into the unziped bin folder
+chmod +x coffeeorders-amd64-macos
+./coffeeorders-amd64-macos
+# then the program should run
+# this assumes you are not on a new mac with the arm64 processors
+# if it does work on the new macs, please open an issue on github and let me know
+# if it does or does not work.  I would be interested in knowing
+```
+
+On Linux
+```bash
+# navigate into the unziped bin folder
+chmod +x coffeeorders-amd64-linux
+./coffeeorders-amd64-linux
+# then the program should run
+# this assumes you are not on a new mac with the arm64 processors
+# if it does work on the new macs, please open an issue on github and let me know
+# if it does or does not work.  I would be interested in knowing
+```
+
+On Windows:
+```bash
+# depending on if you windows is x86, or x64 (most likely x64)
+# navigate into the unziped bin folder
+coffeeorders-amd64.exe
+```
+
+### Once you have the binaries running, you will want this extension:
+    * [REST](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+Once you install the rest extension, you can copy the .http files that are in this repositorie's rest folder,
+don't forget to copy the rest/.env file, since that is where are the http calls are assigned to.
+
+In the rest/.env
+```bash
+baseUrl=https://co.audstanley.com
+# can be changed to
+baseUrl=127.0.0.1
+# and now all the http calls will be made to your own computer.
+```
+
 
 If there is something wrong with the API, please feel free to contibute code or open an issue.
 
@@ -16,7 +67,7 @@ You are welcome to:
 
 Or stop by my blog [audstanley.com](https://www.audstanley.com)
 
-### If you want to run the application as a Docker container:
+### If you want to run the application as a Docker container - or help to develop - a docker container can be useful:
 
 ```bash
 # you can just run the run-dockerfile.sh if you are on linux and have docker installed.
