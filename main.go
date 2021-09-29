@@ -7,6 +7,7 @@ import (
 	"github.com/audstanley/coffeeorders-go/handlers"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
@@ -15,6 +16,12 @@ func main() {
 		DisableStartupMessage: true,
 	}
 	app := fiber.New(config)
+	app.Use(cors.New(cors.Config{
+		AllowOrigins:  "*",
+		AllowHeaders:  "content-type",
+		ExposeHeaders: "*",
+	}))
+
 	fmt.Println("Source code for this API can be found at: https://www.github.com/audstanley/coffeeorders-go")
 	fmt.Println("    Written in GoLang using the Fiber library")
 	fmt.Println("    Feel free to add a star on GitHub 😊")
