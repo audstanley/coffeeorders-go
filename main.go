@@ -32,7 +32,7 @@ func main() {
 	fmt.Println("    Written By: Richard Stanley")
 	fmt.Println("        For: Professor William McCarthy @ CSUF\n")
 	fmt.Println("==========================================")
-	fmt.Println("CoffeeOrders API running on\n\thttp://localhost:3000/coffeeorders\n==========================================\n")
+	fmt.Println("CoffeeOrders API running on\n\thttp://localhost:3001/coffeeorders\n==========================================\n")
 	app.Get("/", handlers.Root)
 	app.Get("/coffeeorders", handlers.ListCoffeeOrders)
 	app.Post("/coffeeorders", handlers.PostACoffeeOrder)
@@ -40,5 +40,5 @@ func main() {
 	app.Delete("/coffeeorders", handlers.DeleteAllCoffeeOrders)
 	app.Delete("/coffeeorders/:emailAddress", handlers.DeleteSingleNewestCoffeeOrderByEmailAddress)
 	app.Put("/coffeeorders/:emailAddress", handlers.PutCoffeeOrderOverExistingByEmail)
-	log.Fatal(app.Listen(fmt.Sprintf(":%s", "3000")))
+	log.Fatal(app.Listen(fmt.Sprintf(":%s", "3001")))
 }
