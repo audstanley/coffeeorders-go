@@ -52,7 +52,7 @@ In the rest/.env
 ```bash
 baseUrl=https://co.audstanley.com
 # can be changed to
-baseUrl=http://127.0.0.1:3000
+baseUrl=http://127.0.0.1:3001
 # and now all the http calls will be made to your own computer.
 ```
 
@@ -81,7 +81,7 @@ Or stop by my blog [audstanley.com](https://www.audstanley.com)
 # if you are not on linux, you can still just run lines 2, and 3 from within that script,
 # and from within your project folder like so:
 docker build -t coffee-orders .
-docker run -dp 3000:3000 coffee-orders
+docker run -dp 3001:3001 coffee-orders
 ```
 
 profit.
