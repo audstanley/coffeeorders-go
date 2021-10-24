@@ -29,9 +29,6 @@ On Linux
 chmod +x coffeeorders-amd64-linux
 ./coffeeorders-amd64-linux
 # then the program should run
-# this assumes you are not on a new mac with the arm64 processors
-# if it does work on the new macs, please open an issue on github and let me know
-# if it does or does not work.  I would be interested in knowing
 ```
 
 On Windows:
