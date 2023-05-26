@@ -55,7 +55,7 @@ baseUrl=http://127.0.0.1:3001
 
 ## TLDR video;
 
-[![tldr](https://i9.ytimg.com/vi/umPXiItPzbQ/mq1.jpg?sqp=CJzVz4oG&rs=AOn4CLAng2mGYz3XOKWjsiJ3AWni9XnCwQ)](https://youtu.be/umPXiItPzbQ)
+[![tldr](https://img.youtube.com/vi/umPXiItPzbQ/default.jpg)](https://www.youtube.com/watch?v=umPXiItPzbQ)
 
 
 
