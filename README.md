@@ -1,6 +1,6 @@
 # Coffeeorders-go
 
-is an API for [Front-End Web Development: The Big Nerd Ranch Guide](https://www.bignerdranch.com/books/front-end-web-development-the-big-nerd-ranch-guide/)
+is an API for [Front-End Web Development: The Big Nerd Ranch Guide](https://a.co/d/egDG6ub)
 The book is missing some endpoints, and this GoLang Project recreates those endpoints and is compiled for windows, mac, and linux.
 
 
