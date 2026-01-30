@@ -1,6 +1,6 @@
 # Coffeeorders-go
 
-this repo is archived and the replacement can be found here [hcoffeeorders-go-2](https://github.com/audstanley/coffeeorders-go-2)
+this repo is archived and the replacement can be found here [coffeeorders-go-2](https://github.com/audstanley/coffeeorders-go-2)
 
 is an API for [Front-End Web Development: The Big Nerd Ranch Guide](https://a.co/d/egDG6ub)
 The book is missing some endpoints, and this GoLang Project recreates those endpoints and is compiled for windows, mac, and linux.
